@@ -116,7 +116,7 @@ abstract class DataLayer
      * @param string $columns
      * @return DataLayer
      */
-    public function find(?string $terms = null, ?string $params = null, string $columns = "*"): DataLayer
+    public function find(?string $terms = null, ?string $params = null, string $columns = "*")
     {
         if ($terms) {
             $this->statement = "SELECT {$columns} FROM {$this->entity} WHERE {$terms}";

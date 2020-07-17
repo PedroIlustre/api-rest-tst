@@ -22,6 +22,7 @@ use Source\Models\Adress;
 $user = new User();
 $list = $user->find()->fetch(true);
 echo "USER";
+
 /** @var $userItem User */
 foreach($list as $userItem){
     # Pega valor de uma coluna específica (neste caso 'first_name')
@@ -40,10 +41,10 @@ foreach($list as $userItem){
     
 }
 
-$adress = new Adress();
-$list2 = $adress->find()->fetch(true);
-echo "ADRESS";
-foreach($list2 as $adressItem){
+// $adress = new Adress();
+// $list2 = $adress->find()->fetch(true);
+// echo "ADRESS";
+// foreach($list2 as $adressItem){
     # Pega valor de uma coluna específica (neste caso 'first_name')
     //var_dump($adressItem->street);
     //echo "<br>";
@@ -54,4 +55,4 @@ foreach($list2 as $adressItem){
 
     # Salva valores de endereço para o objeto ativo 'user'
     //var_dump($adressItem->save($arr_itens));
-}
+// }

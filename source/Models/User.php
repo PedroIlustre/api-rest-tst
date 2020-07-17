@@ -11,6 +11,12 @@ class User extends DataLayer
     }
 
     public function addresses (){
-        return (new Adress())->find('user_id:uid',"uid={$this->id}")->fetch(true);
+        $user_id = $this->id;
+        $address = new Adress();
+
+        $f = $address->find("user_id = :uid","uid=$user_id");
+        print_r($f);die;
+        return $f;
+        // return $address->find("user_id = :uid","uid=$user_id")->fetch(true);
     }
 }
