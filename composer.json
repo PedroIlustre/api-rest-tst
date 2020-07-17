@@ -1,0 +1,26 @@
+{
+    "name":"pedroilustre/api-rest-tst",
+    "description": "teste de uma api rest com meu gerenciamento de dependencias",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pedro Ilustre",
+            "email": "pedroilustre@pedro.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files":[
+            "source/Config.php"
+        ]
+    },
+    "require": {
+        "coffeecode/datalayer":"1.1.2"
+    }
+}
