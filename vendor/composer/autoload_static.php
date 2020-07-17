@@ -15,12 +15,20 @@ class ComposerStaticInit1fd93b68f16b95089c3fcd70247383c3
         array (
             'Source\\' => 7,
         ),
+        'C' => 
+        array (
+            'CoffeeCode\\DataLayer\\' => 21,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Source\\' => 
         array (
             0 => __DIR__ . '/../..' . '/source',
+        ),
+        'CoffeeCode\\DataLayer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/coffeecode/datalayer/src',
         ),
     );
 
