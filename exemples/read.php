@@ -1,21 +1,7 @@
 <?php
 
 require __DIR__.'/../vendor/autoload.php';
-/*
-use CoffeeCode\DataLayer\Connect;
 
-$conn = Connect::getInstance();
-$error = Connect::getError();
-
-if($error){
-    var_dump($error);
-    echo $error->getMessage();
-    die();
-}
-
-$query = $conn->query("SELECT * FROM  users");
-var_dump($query->fetchAll());
-*/
 use Source\Models\User;
 use Source\Models\Address;
 
@@ -26,6 +12,7 @@ $list = $user->find()->fetch(true);
 /** @var $userItem User */
 foreach($list as $userItem){
     echo "USER";
+
     # Pega valor de uma coluna específica (neste caso 'first_name')
     var_dump($userItem->first_name);echo "<br>";
     
@@ -35,9 +22,9 @@ foreach($list as $userItem){
     # Pega valor de endereço do objeto ativo 'user'
     foreach($userItem->addresses() as $userAddresses){
         var_dump($userAddresses->street);echo "<br>";  
-    }
-    //var_dump($userItem->addresses());echo "<br>";    
+    }  
 }
+
 
 // $adress = new Adress();
 // $list2 = $adress->find()->fetch(true);
