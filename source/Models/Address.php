@@ -4,10 +4,10 @@ namespace Source\Models;
 
 use CoffeeCode\DataLayer\DataLayer;
 
-class Adress extends DataLayer
+class Address extends DataLayer
 {
     public function __construct(){
-        parent::__construct("adress",["user_id"],"add_id",false);
+        parent::__construct("address",["user_id"],"add_id",false);
     }
 
     public function add(User $user, string $street, string $number) : Adress{

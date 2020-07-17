@@ -17,28 +17,26 @@ $query = $conn->query("SELECT * FROM  users");
 var_dump($query->fetchAll());
 */
 use Source\Models\User;
-use Source\Models\Adress;
+use Source\Models\Address;
 
 $user = new User();
 $list = $user->find()->fetch(true);
-echo "USER";
+
 
 /** @var $userItem User */
 foreach($list as $userItem){
+    echo "USER";
     # Pega valor de uma coluna específica (neste caso 'first_name')
-    var_dump($userItem->first_name);
-    echo "<br>";
+    var_dump($userItem->first_name);echo "<br>";
+    
     # Pega valor de todo objeto active record (ORM - Object Relational Mapper)
-    //var_dump($userItem->data());
-    //echo "<br>";
+    #var_dump($userItem->data());
     
     # Pega valor de endereço do objeto ativo 'user'
-    var_dump($userItem->addresses());
-
-    echo "<br>";
-    echo "<br>";
-
-    
+    foreach($userItem->addresses() as $userAddresses){
+        var_dump($userAddresses->street);echo "<br>";  
+    }
+    //var_dump($userItem->addresses());echo "<br>";    
 }
 
 // $adress = new Adress();

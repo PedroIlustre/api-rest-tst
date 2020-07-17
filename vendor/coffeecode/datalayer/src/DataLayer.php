@@ -125,6 +125,7 @@ abstract class DataLayer
         }
 
         $this->statement = "SELECT {$columns} FROM {$this->entity}";
+        //print_r($this->statement);die;
         return $this;
     }
 
