@@ -21,6 +21,7 @@
         ]
     },
     "require": {
-        "coffeecode/datalayer":"1.1.2"
+        "coffeecode/datalayer":"1.1.2",
+        "pagarme/pagarme-php":"4.0.*"
     }
 }

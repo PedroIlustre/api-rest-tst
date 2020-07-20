@@ -14,3 +14,5 @@ define("DATA_LAYER_CONFIG", [
         PDO::ATTR_CASE => PDO::CASE_NATURAL
     ]
 ]);
+
+define ('PAGARME_API_KEY',"ak_test_");
