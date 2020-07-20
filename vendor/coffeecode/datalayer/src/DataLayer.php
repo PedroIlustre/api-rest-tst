@@ -254,6 +254,7 @@ abstract class DataLayer
         }
 
         $destroy = $this->delete($this->primary . " = :id", "id={$id}");
+        
         return $destroy;
     }
 
